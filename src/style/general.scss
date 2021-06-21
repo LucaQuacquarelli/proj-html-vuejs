@@ -1,4 +1,5 @@
-@import "~@fontsource/pt-mono/index.css";
+@import "~@fontsource/pt-sans/index.css";
+@import "~@fontsource/roboto-slab/index.css";
 
 * {
     box-sizing: border-box;
@@ -7,5 +8,24 @@
 }
 
 body {
-    font-family: 'PT Mono', monospace;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
+    }
 }

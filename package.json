@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@fontsource/pt-mono": "^4.4.5",
+    "@fontsource/pt-sans": "^4.4.5",
+    "@fontsource/roboto-slab": "^4.4.5",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"

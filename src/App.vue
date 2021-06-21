@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header
+    :social="socialLinks"/>
     <Main/>
     <Footer/>
   </div>
@@ -17,6 +18,28 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data: function() {
+    return {
+      socialLinks: [
+        {
+          icon: "facebook-f",
+          url: "facebook"
+        },
+        {
+          icon: "twitter",
+          url: "twitter"
+        },
+        {
+          icon: "youtube",
+          url: "youtube"
+        },
+        {
+          icon: "instagram",
+          url: "instagram"
+        }
+      ]
+    }
   }
 }   
 </script>
