@@ -66,8 +66,12 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
         height: 40px;
         background-color: $color-theme;
+        z-index: 1;
 
             a {
                 display: flex;

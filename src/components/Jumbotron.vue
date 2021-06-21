@@ -27,7 +27,8 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: calc(100% - 160px);
+        height: 100%;
+        margin-top: 160px;
         background-image: url(../assets/images/home_main_slider_bg.jpg);
         background-size: cover;
         background-attachment: fixed;

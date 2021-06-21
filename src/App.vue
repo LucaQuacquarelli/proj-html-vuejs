@@ -2,22 +2,26 @@
   <div id="app">
     <Header
     :social="socialLinks"/>
-    <Main/>
+    <main>
+      <AboutSection
+      title="Inspired By Excellence & Innovation"
+      subtitle="We offer a wide range of high quality of teaching and extra-curricular activities."/>
+    </main>
     <Footer/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
+import AboutSection from './components/AboutSection.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main,
     Footer,
+    AboutSection,
   },
   data: function() {
     return {
