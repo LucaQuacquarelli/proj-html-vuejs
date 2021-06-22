@@ -90,7 +90,7 @@ export default {
 
     section {
         padding: 50px;
-        background-color: #f7f5f4;
+        background-color: $section-bg;
 
         .content {
             display: flex;

@@ -13,6 +13,7 @@
         </div>
       </div>
       <FacilitiesSection/>
+      <CourseSection/>
     </main>
     <Footer/>
   </div>
@@ -23,6 +24,7 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import AboutSection from './components/AboutSection.vue'
 import FacilitiesSection from './components/FacilitiesSection.vue'
+import CourseSection from './components/CourseSection.vue'
 
 export default {
   name: 'App',
@@ -31,6 +33,7 @@ export default {
     Footer,
     AboutSection,
     FacilitiesSection,
+    CourseSection,
   },
   data: function() {
     return {
