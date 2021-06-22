@@ -8,7 +8,7 @@
         </div>
         <div class="section-content">
             <div class="text">
-                <h3>WHY CHOOSE AVADA UNIVERSITY?</h3>
+                <h3>why choose avada university?</h3>
                 <p>
                     We offer a range of training packages in a range of subject areas and can offer blended learning opportunities to best meet your needs. If sitting in a room with a trainer and having the opportunity for discussion with other learners sounds good to you then we can offer this.
                 </p>
@@ -70,6 +70,7 @@ export default {
                 width: 50%;
 
                 h3 {
+                    text-transform: uppercase;
                     color: $font-color;
                 }
 
@@ -82,8 +83,6 @@ export default {
                 width: 30%;
                 height: 200px;
                 margin: 20px 0;
-                background-image: url("https://lite-vimeo-embed.now.sh/thumb/80567526.jpg?mw=600&mh=338&q=85");
-                background-size: cover;
 
                 iframe {
                     width: 100%;
