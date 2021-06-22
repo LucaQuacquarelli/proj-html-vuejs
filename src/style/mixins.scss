@@ -1,0 +1,31 @@
+@import "./variables";
+
+@mixin section-default {
+        padding: 50px;
+
+        .section-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                margin: 15px 0;
+                color: $font-color;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            hr {
+                @include separe-hr
+            }
+
+        }
+}
+
+@mixin separe-hr {
+    width: 100px;
+    margin: 25px 0;
+    border: 1px solid $color-theme;
+}

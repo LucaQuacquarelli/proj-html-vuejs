@@ -35,35 +35,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
+@import "../style/mixins";
 
     section {
-        padding: 50px;
-
-        .section-title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            h2 {
-                margin: 15px 0;
-                color: $font-color;
-            }
-
-            p {
-                font-size: 20px;
-            }
-
-            hr {
-                width: 100px;
-                margin: 25px 0;
-                border: 1px solid $color-theme;
-            }
-
-        }
+        @include section-default;
 
         .section-content {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             margin: 40px 0;
 
             .text {

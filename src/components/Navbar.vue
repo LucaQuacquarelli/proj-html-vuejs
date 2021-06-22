@@ -71,14 +71,15 @@ export default {
 @import "../style/variables";
     nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         position: fixed;
         top: 40px;
         width: 100%;
         height: 120px;
-        padding: 20px 0;
+        padding: 20px 50px;
         background-color: white;
+        z-index: 1;
 
         a {
             display: flex;

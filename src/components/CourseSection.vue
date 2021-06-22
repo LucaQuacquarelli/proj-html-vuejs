@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
+@import "../style/mixins";
 
     section {
         display: flex;
@@ -75,9 +76,8 @@ export default {
             }
 
             hr {
+                @include separe-hr;
                 width: 50px;
-                margin: 25px 0;
-                border: 1px solid $color-theme;
             }
         }
 

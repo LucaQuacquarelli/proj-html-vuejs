@@ -64,12 +64,13 @@ export default {
 
     .info-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         position: fixed;
         top: 0;
         width: 100%;
         height: 40px;
+        padding: 0 50px;
         background-color: $color-theme;
         z-index: 1;
 

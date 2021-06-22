@@ -14,6 +14,9 @@
       </div>
       <FacilitiesSection/>
       <CourseSection/>
+      <NewsSection
+      title="Today’s Univeristy News"
+      subtitle="Covering topics from classes to politics and student organization events."/>
     </main>
     <Footer/>
   </div>
@@ -25,6 +28,7 @@ import Footer from './components/Footer.vue'
 import AboutSection from './components/AboutSection.vue'
 import FacilitiesSection from './components/FacilitiesSection.vue'
 import CourseSection from './components/CourseSection.vue'
+import NewsSection from './components/NewsSection.vue'
 
 export default {
   name: 'App',
@@ -34,6 +38,7 @@ export default {
     AboutSection,
     FacilitiesSection,
     CourseSection,
+    NewsSection,
   },
   data: function() {
     return {

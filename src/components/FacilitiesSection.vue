@@ -94,7 +94,7 @@ export default {
 
         .content {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
 
             .facilities-container,
             .our-values {
