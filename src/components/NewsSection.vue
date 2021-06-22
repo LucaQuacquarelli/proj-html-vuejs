@@ -9,12 +9,6 @@
         <div class="section-content">
             <div class="news-card" v-for="(news, index) in newsCards" :key="index"  @click.prevent="setCount(index)">
                 <img :src="require(`../assets/images/${news.img}`)" :alt="`${news.author} photo`">
-                <div class="share">
-                    <div class="icon">
-                        <i class="fas fa-link"></i>
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
                 <div class="info-news">
                     <div class="title">
                         <h3>{{news.title}}</h3>
@@ -87,41 +81,18 @@ export default {
             margin: 40px 0;
 
             .news-card {
-                position: relative;
                 width: 30%;
                 height: 100%;
                 background-color: white;
                 cursor: pointer;
+                transition: 0.3s;
 
-                &:hover .share {
-                    display: block;
+                &:hover {
+                    scale: 1.1;
                 }
                 
                 img {
                     width: 100%;
-                }
-                
-                .share {
-                    display: none;
-                    position: absolute;
-                    top: 0;
-                    width: 100%;
-                    height: 55%;
-                    background-color: rgba($color-theme, 0.8);
-
-                        
-                    .icon {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        
-                        i {
-                            margin: 0 5px ;
-                            font-size: 20px;
-                        }
-                    }
-
                 }
 
                 .info-news {

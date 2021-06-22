@@ -17,6 +17,7 @@
       <NewsSection
       title="Today’s Univeristy News"
       subtitle="Covering topics from classes to politics and student organization events."/>
+      <FormSection/>
     </main>
     <Footer/>
   </div>
@@ -29,6 +30,7 @@ import AboutSection from './components/AboutSection.vue'
 import FacilitiesSection from './components/FacilitiesSection.vue'
 import CourseSection from './components/CourseSection.vue'
 import NewsSection from './components/NewsSection.vue'
+import FormSection from './components/FormSection.vue'
 
 export default {
   name: 'App',
@@ -39,6 +41,7 @@ export default {
     FacilitiesSection,
     CourseSection,
     NewsSection,
+    FormSection,
   },
   data: function() {
     return {
