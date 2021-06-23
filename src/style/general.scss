@@ -1,5 +1,6 @@
 @import "~@fontsource/pt-sans/index.css";
 @import "~@fontsource/roboto-slab/index.css";
+@import "./variables";
 
 * {
     box-sizing: border-box;
@@ -31,5 +32,5 @@ ul {
 }
 
 p {
-    color: #7e8890;
+    color: $p-color;
 }

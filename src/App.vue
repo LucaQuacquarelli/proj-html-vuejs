@@ -19,7 +19,8 @@
       subtitle="Covering topics from classes to politics and student organization events."/>
       <FormSection/>
     </main>
-    <Footer/>
+    <Footer
+    :social="socialLinks"/>
   </div>
 </template>
 

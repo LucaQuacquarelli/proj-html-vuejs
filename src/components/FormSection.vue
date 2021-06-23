@@ -40,7 +40,6 @@ export default {
     section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         padding: 50px;
         background-color: #333c4e;
@@ -50,6 +49,7 @@ export default {
             flex-direction: column;
             align-items: center;
             position: relative;
+            margin: 15px 0;
 
             span {
                 color: $color-theme;
@@ -75,7 +75,7 @@ export default {
         .form-container {
             display: flex;
             align-items: center;
-            margin: 30px 0;
+            margin: 15px 0;
 
             input {
                 margin: 0 5px;
