@@ -5,9 +5,23 @@
         </div>
         <div class="menu-container">
             <ul>
-                <li v-for="(menulink, index) in menuLinks" :key="index"
+                <li v-for="(menulink, index) in menuLinks" :key="index" :class="menulink.dropdown ? 'dropdown': ''"
                 @click.prevent="setActiveLink(index)">
-                    <a :href="menulink.url" :class="activeIndex == index ? 'active': ''">{{menulink.name}}<span v-if="menulink.addOn">{{menulink.addOn}}</span></a>
+                    <a :href="menulink.url" :class="activeIndex == index ? 'active': ''">{{menulink.name}}
+                        <span v-if="menulink.addOn" class="addOn">{{menulink.addOn}}</span>
+                        <span  class="dropdown" v-if="menulink.dropdown">
+                            <i class="fas fa-chevron-down"></i>
+                            <div class="courses">
+                                <div class="course">
+                                    <CourseCard v-for="(card, index) in cards" :key="index"
+                                    :allCards="card"/>
+                                </div>
+                                <div class="mega-menu">
+                                    <img src="../assets/images/megamenu_courses_bg.jpg" alt="mega menu">
+                                </div>
+                            </div>
+                        </span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -15,7 +29,12 @@
 </template>
 
 <script>
+import CourseCard from './CourseCard.vue'
+
 export default {
+  components: {
+      CourseCard
+    },
     name: "Navbar",
     data: function() {
         return {
@@ -23,38 +42,72 @@ export default {
                 {
                     name: "home",
                     url: "home",
-                    addOn: ""
+                    addOn: "",
+                    dropdown: false
                 },
                 {
                     name: "about",
                     url: "about",
-                    addOn: ""
+                    addOn: "",
+                    dropdown: false
                 },
                 {
                     name: "courses",
                     url: "courses",
-                    addOn: "new"
+                    addOn: "new",
+                    dropdown: true
                 },
                 {
                     name: "events",
                     url: "events",
-                    addOn: ""
+                    addOn: "",
+                    dropdown: false
                 },
                 {
                     name: "facilities",
                     url: "facilities",
-                    addOn: ""
+                    addOn: "",
+                    dropdown: false
                 },
                 {
                     name: "news",
                     url: "news",
-                    addOn: ""
+                    addOn: "",
+                    dropdown: false
                 },
                 {
                     name: "admissions",
                     url: "admissions",
-                    addOn: "apply"
+                    addOn: "apply",
+                    dropdown: false
                 },
+            ],
+            cards: [
+                {
+                    img: "course_sports_portfolio_feat.jpg",
+                    courseName: "Sports Course",
+                    url: "sports-course"
+                },
+                {
+                    img: "course_biology_portfolio_feat.jpg",
+                    courseName: "Biology Course",
+                    url: "biology-course"
+                },
+                {
+                    img: "course_graphic_design_portfolio_feat.jpg",
+                    courseName: "Graphic Course",
+                    url: "graphic-course"
+                },
+                {
+                    img: "course_physics_portfolio_feat.jpg",
+                    courseName: "Physics Course",
+                    url: "physics-ourse"
+                },
+                {
+                    img: "english_seminar_event_feat.jpg",
+                    courseName: "English Seminar",
+                    url: "english-seminar"
+                }
             ],
             activeIndex: 0
         }
@@ -76,10 +129,15 @@ export default {
         position: fixed;
         top: 40px;
         width: 100%;
-        height: 120px;
-        padding: 20px 50px;
+        height: 105px;
+        padding: 0px 50px;
         background-color: white;
         z-index: 1;
+        
+
+        li {
+            padding: 40px 0;
+        }
 
         a {
             display: flex;
@@ -96,14 +154,58 @@ export default {
             &.active{
                 color: $color-theme;
             }
-
+            
             span {
                 margin: 0 5px;
-                padding: 3px 10px;
                 font-size: 12px;
+            }
+            
+
+            span.addOn {
+                padding: 3px 10px;
                 background-color: #52c7e1;
                 color: white;
                 border-radius: 5px;
+            }
+        }
+        .dropdown .courses {
+            display: flex;
+            position: absolute;
+            top: 105px;
+            left: 2.5%;
+            width: 95%;
+            background-color: $section-bg;
+            visibility: hidden;
+
+            .course {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 70%;
+                border-top: 5px solid $color-theme;
+            }
+
+            .mega-menu {
+                width: 30%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+        .dropdown:hover .courses{
+            animation: visible 1s forwards;
+            @keyframes visible {
+                0% {
+                    opacity: 0;
+                    visibility: visible;
+                }
+                100% {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
     }
