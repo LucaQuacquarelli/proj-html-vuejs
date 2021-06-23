@@ -21,6 +21,9 @@
     </main>
     <Footer
     :social="socialLinks"/>
+    <div class="up">
+      <a href="#app"><i class="fas fa-chevron-up"></i></a>
+    </div>
   </div>
 </template>
 
@@ -71,6 +74,11 @@ export default {
 
 <style lang="scss">
 @import "./style/general";
+@import "./style/variables";
+
+#app {
+  position: relative;
+}
 
 .separe {
   height: 100px;
@@ -94,6 +102,23 @@ export default {
     border-right: 670px solid transparent;
   }
 
+}
+
+.up {
+  display: flex;
+  justify-content: center; 
+  position: fixed; 
+  bottom: 0;
+  right: 15px;
+  padding: 5px 15px;
+  border-radius: 5px 5px 0 0;
+  background-color: $font-color;
+  z-index: 1;
+  cursor: pointer;
+  
+  &:hover i {
+    scale: 1.2;
+  }
 }
 
 </style>
